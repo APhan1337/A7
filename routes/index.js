@@ -37,10 +37,6 @@ exports.print = function (req, res) {
   res.render('print');
 }
 
-exports.eval = function (req, res) {
-  res.render('eval');
-}
-
 exports.journey = function (req, res) {
   res.render('journey');
 };

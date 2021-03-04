@@ -9,6 +9,7 @@ var path = require('path');
 var handlebars = require('express-handlebars');
 
 var index = require('./routes/index');
+var add = require('./routes/add');
 
 // Example route
 // var user = require('./routes/user');
@@ -43,9 +44,10 @@ app.get('/required', index.required);
 app.get('/completed', index.completed);
 app.get('/wip', index.wip);
 app.get('/print', index.print);
-app.get('/eval', index.eval);
 app.get('/journey', index.journey);
 app.get('/checkpoint', index.checkpoint);
+
+app.get('/add-comment', add.addComment);
 // Example route
 // app.get('/users', user.list);
 
