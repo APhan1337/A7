@@ -21,26 +21,7 @@
                 <h1 class="title">Degree Audit</h1>
 
             </div>
-            <div class="row">
-                <div class="col-6">
-                    <p>Name: Kenneth Chen</p>
-                </div>
-                <div class="col-6">
-                    <p>PID: A15819942</p>
-                </div>
-                <div class="col-6">
-                    <p>College: Sixth</p>
-                </div>
-                <div class="col-6">
-                    <p>GPA: 4.0</p>
-                </div>
-                <div class="col-6">
-                    <p>Major: Math-CS</p>
-                </div>
-                <div class="col-6">
-                    <p>Minor: Cog. Sci.</p>
-                </div>
-            </div>
+            {{> user user=user}}
             <a class="btn btn-secondary" href="/print" role="button">Print Degree Audit</a>
         </div>
     </header>
@@ -67,21 +48,7 @@
 
     <div class="offset"></div>
 
-    <nav class="bg-white">
-        <div class="btn-group btn-group-lg" role="group" aria-label="Basic checkbox toggle button group">
-            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="btncheck1"><a href="/required"
-                    class="text-dark">Required</a></label>
-
-            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="btncheck2"><a href="/completed"
-                    class="text-dark">Completed</a></label>
-
-            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-            <label class="btn btn-secondary" for="btncheck3"><a href="/wip" class="text-white">In
-                    Progress</a></label>
-        </div>
-    </nav>
+    {{> nav wip=true}}
 </body>
 
 </html>

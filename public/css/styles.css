@@ -64,7 +64,7 @@ nav a {
 }
 
 .print-preview-container {
-    width: 45%;
+    width: 500px;
     min-height: 97%;
     background-color: white;
 }
