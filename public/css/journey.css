@@ -40,34 +40,36 @@ body {
 #audit-button {
     width: 100px;
     height: 50px;
-    position: fixed;
-    right: 100px;
-    bottom: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 15%;
+    color: white;
 }
 
-#audit-button svg {
-    width: 100px;
-    height: 100px;
-}
 
 #dda-button {
-    width: 100px;
-    height: 50px;
-    position: fixed;
-    left: 60%;
+    position: absolute;
+    left: 75%;
+    top: 35%;
 }
 
-#dda-button svg {
-    width: 200px;
-    height: 200px;
+
+#flag-button1 {
+    position: absolute;
+    left: 25%;
+    top: 75%;
 }
 
-#flag-button {
-    width: 100px;
-    height: 50px;
-    position: fixed;
+#flag-button2 {
+    position: absolute;
     left: 50%;
     top: 60%;
+}
+
+#flag-button3 {
+    position: absolute;
+    left: 75%;
+    top: 50%;
 }
 
 #flag-button svg {
