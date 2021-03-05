@@ -10,6 +10,7 @@ var handlebars = require('express-handlebars');
 
 var index = require('./routes/index');
 var add = require('./routes/add');
+var user = require('./routes/user');
 
 // Example route
 // var user = require('./routes/user');
@@ -48,6 +49,7 @@ app.get('/journey', index.journey);
 app.get('/checkpoint', index.checkpoint);
 
 app.get('/add-comment', add.addComment);
+app.post('/user/name', user.setName);
 // Example route
 // app.get('/users', user.list);
 

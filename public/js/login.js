@@ -25,7 +25,7 @@ function initializePage() {
         console.log(pid);
         console.log(password);
 
-        if(pid !== "A12345678" || password !== "CatsAreCool") {
+        if (pid !== "A12345678" || password !== "CatsAreCool") {
             alert("Make sure PID is A12345678 and password is CatsAreCool");
             $('form').trigger('reset');
         } else {
@@ -37,8 +37,8 @@ function initializePage() {
 }
 
 function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
+    FB.getLoginStatus(function (response) {
+        statusChangeCallback(response);
     });
 }
 
@@ -52,6 +52,13 @@ function statusChangeCallback(response) {
     if (response.status === 'connected') {
         // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
+        FB.api('/me?fields=name,first_name', changeUser);
         window.location.pathname = "/journey";
     }
-  }
+}
+
+function changeUser(response) {
+    $.post('/user/name', {
+        name: response.name
+    })
+}
