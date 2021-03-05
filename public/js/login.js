@@ -58,7 +58,7 @@ function statusChangeCallback(response) {
 }
 
 function changeUser(response) {
-    $.post('/user/name', {
-        name: response.name
-    })
+    // $.post('/user/name', {
+    //     name: response.name
+    // })
 }
